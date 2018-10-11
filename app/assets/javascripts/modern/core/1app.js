@@ -8,12 +8,12 @@
   Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 
-modernAdminApp = function(window, document, $) {
+(function(window, document, $) {
     'use strict';
     var $html = $('html');
     var $body = $('body');
 
-    console.log('hello from appjs');
+
     $(window).on('load',function(){
         var rtl;
         var compactMenu = false; // Set it to true, if you want default menu to be compact
@@ -349,9 +349,4 @@ modernAdminApp = function(window, document, $) {
         }, 100);
     });
 
-}
-
-document.addEventListener("turbolinks:load", function() {
-  console.log('launching app');
-  modernAdminApp(window, document, jQuery);
-})
+})(window, document, jQuery);

@@ -1633,3 +1633,23 @@
   <!--/ Basic Horizontal Timeline -->
 </div>
 
+<!-- VER SI ESTOS SON COMUNES O DE NIVEL DE PAGINA-->
+<%= javascript_include_tag 'modern/vendors/vendors.min.js' %>
+<%= javascript_include_tag 'modern/vendors/ui/headroom.min.js' %>
+<!-- FIN DE VER SI ESTOS SON COMUNES O DE NIVEL DE PAGINA-->
+<!-- INICIO DE LOS GRAFICOS Y TABLAS-->
+<%= javascript_include_tag 'modern/vendors/charts/chartist.min.js' %>
+<%= javascript_include_tag 'modern/vendors/charts/chartist-plugin-tooltip.js' %>
+<%= javascript_include_tag 'modern/vendors/charts/raphael-min.js' %>
+<%= javascript_include_tag 'modern/vendors/charts/morris.min.js' %>
+<%= javascript_include_tag 'modern/vendors/tables/datatable/datatables.min.js' %>
+<%= javascript_include_tag 'modern/scripts/extensions/block-ui.js' %>
+<!-- FIN DE LOS GRAFICOS Y TABLAS-->
+<!-- INICIO DE LOS MENUS. VAN AL FINAL DE TODO-->
+<%= javascript_include_tag 'modern/core/app-menu.js' %>
+<%= javascript_include_tag 'modern/core/app.js' %>
+<%= javascript_include_tag 'modern/scripts/customizer.js' %>
+<!-- FIN DE LOS MENUS. VAN AL FINAL DE TODO-->
+  <!-- INICIO DEL DASHBOARD. ESTE SI APARECE AL FINAL DE TODO. PROBAR PASANDOLO AL FINAL DEL LAYOUT-->
+  <%= javascript_include_tag 'modern/scripts/pages/dashboard-ecommerce.js' %>
+<!-- FIN DEL DASHBOARD. ESTE SI APARECE AL FINAL DE TODO. PROBAR PASANDOLO AL FINAL DEL LAYOUT-->
