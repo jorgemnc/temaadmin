@@ -11,8 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
   rel="stylesheet">
-  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
-  rel="stylesheet">
+
+  <!-- AQUI VA LA LLAMADA AL LINE-AWESOME CSS -->
+
   <!-- Fin de Requerimientos externos del tema admin -->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -42,10 +43,10 @@ data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
   <!-- END VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
   <%= javascript_include_tag "modern/vendors/ui/headroom.min.js" %>
-  <%#= javascript_include_tag "modern/vendors/charts/chartist.min.js" %>
-  <%#= javascript_include_tag "modern/vendors/charts/chartist-plugin-tooltip.min.js" %>
+  <%= javascript_include_tag "modern/vendors/charts/chartist.min.js" %>
+  <%= javascript_include_tag "modern/vendors/charts/chartist-plugin-tooltip.min.js" %>
   <%= javascript_include_tag "modern/vendors/charts/raphael-min.js" %>
-  <%#= javascript_include_tag "modern/vendors/charts/morris.min.js" %>
+  <%= javascript_include_tag "modern/vendors/charts/morris.min.js" %>
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
   <%= javascript_include_tag "modern/core/app-menu.js" %>
@@ -53,7 +54,7 @@ data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
   <%= javascript_include_tag "modern/scripts/customizer.js" %>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <%#= javascript_include_tag "modern/scripts/pages/dashboard-ecommerce.js" %>
+  <%= javascript_include_tag "modern/scripts/pages/dashboard-ecommerce.js" %>
   <!-- END PAGE LEVEL JS-->
 
 

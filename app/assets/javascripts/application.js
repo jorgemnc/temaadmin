@@ -17,5 +17,3 @@
 //= require jquery-ui
 //= require activestorage
 //= require turbolinks
-
-//probar borrando este

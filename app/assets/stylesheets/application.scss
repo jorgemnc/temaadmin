@@ -2,19 +2,11 @@
 
 @import "jorge/custom";
 
+@import "line-awesome/css/line-awesome.css";
+
 //@import "modern/bootstrap.css";
 //@import "modern/vendors/extensions/pace";
-//@import 'modern/vendors/*';
 
-@import 'modern/app';
-
-
-//Estos son estilos específicos a la página, pero los puse aquí para ver si los puedo ubicar bien con la ruta.
-@import 'modern/core/menu/menu-types/vertical-content-menu.css';
-@import 'modern/core/colors/palette-gradient.css';
-@import 'simple-line-icons/style.css';
-@import 'modern/core/colors/palette-gradient.css';
-@import 'modern/pages/dashboard-ecommerce.css';
 
 /* add vendors styles for plugins individually as they become necesary */
 //@import "modern/vendors/css/charts/chartist.css";
@@ -28,6 +20,15 @@
 @import 'modern/vendors/charts/morris.css';
 @import 'modern/vendors/charts/chartist.css';
 @import 'modern/vendors/charts/chartist-plugin-tooltip.css';
+
+
+@import 'modern/app';
+//Estos son estilos específicos a la página, pero los puse aquí para ver si los puedo ubicar bien con la ruta.
+@import 'modern/core/menu/menu-types/vertical-content-menu.css';
+@import 'modern/core/colors/palette-gradient.css';
+@import 'simple-line-icons/style.css';
+@import 'modern/core/colors/palette-gradient.css';
+@import 'modern/pages/dashboard-ecommerce.css';
 
 //en este archivo poner mis personalizaciones
 @import 'modern/custom';
