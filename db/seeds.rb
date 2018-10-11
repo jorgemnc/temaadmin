@@ -1,0 +1,6 @@
+Book.create!(title:"Libro 1 bdk asdkjs adf")
+Book.create!(title:"Libro 2 dsd dkad ")
+Book.create!(title:"Libro 3 bd hdshdashdsahjk adsds")
+Book.create!(title:"Libro 4 bdbehjdjh ds")
+Book.create!(title:"Libro 5 ds jhd jads")
+Book.create!(title:"Libro 6 ddjkjk ewk ew")

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" lang="es" data-textdirection="ltr">
+  <head>
+    <title>TemaModernAdmin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  <!-- Inicio de Requerimientos externos del tema admin -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+  rel="stylesheet">
+  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+  rel="stylesheet">
+  <!-- Fin de Requerimientos externos del tema admin -->
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar"
+data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
+    
+    <%= render "shared/top_nav" %>
+    
+    <div class="app-content content">
+      <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+
+        <%= yield %>
+  
+      </div>
+
+      <%= render "shared/footer" %>
+    
+    </div>
+
+  <!-- BEGIN VENDOR JS-->
+  <%= javascript_include_tag "modern/vendors/vendors.min.js" %>
+  <!-- END VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <%= javascript_include_tag "modern/vendors/ui/headroom.min.js" %>
+  <%#= javascript_include_tag "modern/vendors/charts/chartist.min.js" %>
+  <%#= javascript_include_tag "modern/vendors/charts/chartist-plugin-tooltip.min.js" %>
+  <%= javascript_include_tag "modern/vendors/charts/raphael-min.js" %>
+  <%#= javascript_include_tag "modern/vendors/charts/morris.min.js" %>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <%= javascript_include_tag "modern/core/app-menu.js" %>
+  <%= javascript_include_tag "modern/core/app.js" %>
+  <%= javascript_include_tag "modern/scripts/customizer.js" %>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <%#= javascript_include_tag "modern/scripts/pages/dashboard-ecommerce.js" %>
+  <!-- END PAGE LEVEL JS-->
+
+
+  </body>
+</html>
