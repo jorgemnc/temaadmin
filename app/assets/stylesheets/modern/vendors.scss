@@ -10,11 +10,11 @@
 
 
 // Bootstrap core
-@import "bootstrap";
+@import "modern/bootstrap.css";
 // Font icons
 @import "feather/style.css";
 // @import url("../fonts/icomoon.css");
-@import "flag-icon-css/css/flag-icon";
+@import url("flag-icon-css/css/flag-icon.min.css");
 // Pace Loader
-@import "vendors/extensions/pace";
+@import "modern/vendors/extensions/pace";
 

@@ -303,9 +303,8 @@ modernAdminApp = function(window, document, $) {
         e.stopPropagation();
     });
 
+    $(document).ready(function(){
 
-
-    $(document).on("page:change", function() {
         /**********************************
         *   Form Wizard Step Icon
         **********************************/
@@ -317,10 +316,6 @@ modernAdminApp = function(window, document, $) {
             }
         });
     });
-
-
-
-
 
     // Update manual scroller when window is resized
     $(window).resize(function() {
