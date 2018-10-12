@@ -7,6 +7,9 @@ class BooksController < ApplicationController
   def prueba2
   end
 
+  def prueba3
+  end
+
   # GET /books
   # GET /books.json
   def index
