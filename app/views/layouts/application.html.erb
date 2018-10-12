@@ -21,25 +21,18 @@
 
   <body class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar"
 data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
-    
-    <%= render "shared/top_nav" %>
-    
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-light navbar-hide-on-scroll navbar-border navbar-shadow">
+      <%= render "shared/top_nav" %>
+    </nav>
     <div class="app-content content">
       <div class="content-wrapper">
         <div class="content-header row">
         </div>
-
-        <%= yield %>
-  
+          <%= render "shared/left_nav" %>
+          <%= yield %>
       </div>
-
       <%= render "shared/footer" %>
-    
     </div>
-
-<%= javascript_include_tag 'modern/core/app-menu.js', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'modern/core/app.js', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'modern/scripts/customizer.js', 'data-turbolinks-track': 'reload' %>
 
   </body>
 </html>
