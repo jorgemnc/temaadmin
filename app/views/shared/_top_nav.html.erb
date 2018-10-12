@@ -1,14 +1,15 @@
-<!-- fixed-top-->
   <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-light navbar-hide-on-scroll navbar-border navbar-shadow navbar-brand-center">
     <div class="navbar-wrapper">
       <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
           <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
           <li class="nav-item">
-            <a class="navbar-brand" href="index.html">
-              <%= image_tag "logo.png", class:"brand-logo", alt:"modern admin logo" %>
-              <h3 class="brand-text">Modern Admin</h3>
-            </a>
+              <span class="navbar-brand">
+                <%= link_to root_path do %>
+                <%= image_tag "logo.png", class:"brand-logo", alt:"modern admin logo" %>
+                <% end %>
+                <h3 class="brand-text"><%= link_to "Modern Admin", root_path %></h3>
+              </span>
           </li>
           <li class="nav-item d-md-none">
             <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a>
@@ -321,4 +322,3 @@
       </div>
     </div>
   </nav>
-  <!-- ////////////////////////////////////////////////////////////////////////////-->
