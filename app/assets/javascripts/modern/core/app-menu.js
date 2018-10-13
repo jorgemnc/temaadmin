@@ -8,7 +8,7 @@
   Author: Pixinvent
   Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
-modernAdminAppMenu = function(window, document, $) {
+(function(window, document, $) {
   'use strict';
 
   $.app = $.app || {};
@@ -17,8 +17,6 @@ modernAdminAppMenu = function(window, document, $) {
   var $window     = $( window );
   var menuWrapper_el = $('div[data-menu="menu-wrapper"]').html();
   var menuWrapperClasses = $('div[data-menu="menu-wrapper"]').attr('class');
-
-  console.log('from app menu')
 
   // Main menu
   $.app.menu = {
@@ -981,9 +979,4 @@ modernAdminAppMenu = function(window, document, $) {
     },
   };
 
-}
-
-document.addEventListener("turbolinks:load", function() {
-  console.log('launching app menu');
-  modernAdminAppMenu(window, document, jQuery);
-})
+})(window, document, jQuery);

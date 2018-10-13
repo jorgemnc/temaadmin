@@ -14,7 +14,6 @@ modernAdminApp = function(window, document, $) {
     var $body = $('body');
 
     console.log('hello from appjs');
-    $(window).on('load',function(){
         var rtl;
         var compactMenu = false; // Set it to true, if you want default menu to be compact
 
@@ -32,9 +31,7 @@ modernAdminApp = function(window, document, $) {
         var config = {
             speed: 300 // set speed to expand / collpase menu
         };
-        if($.app.nav.initialized === false){
-            $.app.nav.init(config);
-        }
+        $.app.nav.init(config);
 
         Unison.on('change', function(bp) {
             $.app.menu.change();
@@ -211,7 +208,6 @@ modernAdminApp = function(window, document, $) {
                 searchInput.addClass('open');
             }
         });
-    });
 
 
     $(document).on('click', '.menu-toggle, .modern-nav-toggle', function(e) {

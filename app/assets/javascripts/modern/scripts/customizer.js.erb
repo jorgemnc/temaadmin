@@ -8,7 +8,7 @@
   Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 
-var customize = function(window, document, $) {
+(function(window, document, $) {
     'use strict';
 
     /********************************
@@ -459,8 +459,4 @@ var customize = function(window, document, $) {
           $('.brand-logo').attr('src','<%= asset_path("logo.png")%>');
         }
     }
-};
-
-document.addEventListener("turbolinks:load", function() {
-  customize(window, document, jQuery);
-})
+})(window, document, jQuery);

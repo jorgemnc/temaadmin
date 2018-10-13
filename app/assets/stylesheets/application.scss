@@ -1,4 +1,5 @@
-@import "bootstrap";
+@import 'modern/vendors';
+@import 'modern/app';
 
 @import "jorge/custom";
 
@@ -6,15 +7,17 @@
 //@import "modern/vendors/extensions/pace";
 //@import 'modern/vendors/*';
 
-@import 'modern/app';
+
 
 
 //Estos son estilos específicos a la página, pero los puse aquí para ver si los puedo ubicar bien con la ruta.
-@import 'modern/core/menu/menu-types/vertical-content-menu.css';
-@import 'modern/core/colors/palette-gradient.css';
-@import 'simple-line-icons/style.css';
-@import 'modern/core/colors/palette-gradient.css';
-@import 'modern/pages/dashboard-ecommerce.css';
+@import 'modern/core/menu/menu-types/vertical-menu-modern';
+@import 'modern/core/colors/palette-gradient';
+@import 'modern/vendors/charts/chartist';
+@import 'modern/vendors/charts/chartist-plugin-tooltip';
+@import 'modern/vendors/charts/morris';
+@import 'simple-line-icons/style';
+@import 'modern/pages/dashboard-ecommerce';
 
 /* add vendors styles for plugins individually as they become necesary */
 //@import "modern/vendors/css/charts/chartist.css";
@@ -22,10 +25,8 @@
 /*-------- */
 
 //Estos son estilos de vendors específicos a la página, pero los puse aquí para ver si los puedo ubicar bien con la ruta.
-@import 'modern/vendors';
-@import 'modern/vendors/weather-icons/climacons.min.css';
+@import 'modern/vendors/weather-icons/climacons.min';
 @import 'meteocons/style.css';
-@import 'modern/vendors/charts/morris.css';
 @import 'modern/vendors/charts/chartist.css';
 @import 'modern/vendors/charts/chartist-plugin-tooltip.css';
 
