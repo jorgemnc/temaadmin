@@ -574,7 +574,11 @@
   <!--/ Basic Horizontal Timeline -->
 </div>
 
-
+<script>
+  document.querySelector(".has-sub").addEventListener("click",function(){
+    document.querySelector(".menu-content ul").classList.add("open")
+  })
+</script>
 <!-- INICIO DE LOS GRAFICOS Y TABLAS-->
 <%= javascript_include_tag 'modern/vendors/charts/chartist.min.js', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'modern/vendors/charts/chartist-plugin-tooltip.js' %>
@@ -584,7 +588,7 @@
 <%= javascript_include_tag 'modern/scripts/extensions/block-ui.js', 'data-turbolinks-track': 'reload' %>
 <!-- FIN DE LOS GRAFICOS Y TABLAS-->
 
-<!-- INICIO DEL DASHBOARD. ESTE SI APARECE AL FINAL DE TODO. PROBAR PASANDOLO AL FINAL DEL LAYOUT-->
+<!-- INICIO DEL DASHBOARD. ESTE SI APARECE AL FINAL DE TODO.ESTE CARGA LAS GRAFICAS DE LINEA. DEBE IR EN LA PAGINA-->
 <%= javascript_include_tag 'modern/scripts/pages/dashboard-ecommerce.js', 'data-turbolinks-track': 'reload' %>
 <!-- FIN DEL DASHBOARD. ESTE SI APARECE AL FINAL DE TODO. PROBAR PASANDOLO AL FINAL DEL LAYOUT-->
 

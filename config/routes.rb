@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   root to: 'books#inicio'
   #root to: 'books#prueba'
   get :prueba, to: 'books#prueba'
-  get :prueba2, to: 'books#prueba2'
   get :prueba3, to: 'books#prueba3'
-  get :prueba4, to: 'books#prueba4'
 
   resources :books
   
