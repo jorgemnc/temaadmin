@@ -32,6 +32,68 @@ $.onmount('#monthly-sales', function () {
     });
 });
 
+$.onmount('#cost-revenue', function () {
+    /*************************************************
+     *               Cost Revenue Stats               *
+     *************************************************/
+    new Chartist.Line(this, {
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        series: [
+            [
+                {meta:'Revenue', value: 5},
+                {meta:'Revenue', value: 3},
+                {meta:'Revenue', value: 6},
+                {meta:'Revenue', value: 3},
+                {meta:'Revenue', value: 8},
+                {meta:'Revenue', value: 5},
+                {meta:'Revenue', value: 8},
+                {meta:'Revenue', value: 12},
+                {meta:'Revenue', value: 7},
+                {meta:'Revenue', value: 14},
+
+            ]
+        ]
+    }, {
+        low: 0,
+        high: 18,
+        fullWidth: true,
+        showArea: true,
+        showPoint: true,
+        showLabel: false,
+        axisX: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0
+        },
+        axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0
+        },
+        chartPadding: 0,
+        plugins: [
+            Chartist.plugins.tooltip()
+        ]
+    }).on('draw', function(data) {
+        if (data.type === 'area') {
+            data.element.attr({
+                'style': 'fill: #28D094; fill-opacity: 0.2'
+            });
+        }
+        if (data.type === 'line') {
+            data.element.attr({
+                'style': 'fill: transparent; stroke: #28D094; stroke-width: 4px;'
+            });
+        }
+        if (data.type === 'point') {
+            var circle = new Chartist.Svg('circle', {
+                cx: [data.x], cy:[data.y], r:[7],
+            }, 'ct-area-circle');
+            data.element.replace(circle);
+        }
+    });
+});
+
 $(window).on("load", function(){
     $('#recent-buyers, #new-orders').perfectScrollbar({
         wheelPropagation: true
@@ -180,69 +242,16 @@ $(window).on("load", function(){
         }
       };
 
-      createChart();
-      $(".chart-action li a").on("click", function () {
-        createChart($(this));
-      });
-    })();
+        $.onmount('#ecommerceChartView', function () {
+            createChart();
+        });
 
-    /*************************************************
-    *               Cost Revenue Stats               *
-    *************************************************/
-    new Chartist.Line('#cost-revenue', {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        series: [
-            [
-                {meta:'Revenue', value: 5},
-                {meta:'Revenue', value: 3},
-                {meta:'Revenue', value: 6},
-                {meta:'Revenue', value: 3},
-                {meta:'Revenue', value: 8},
-                {meta:'Revenue', value: 5},
-                {meta:'Revenue', value: 8},
-                {meta:'Revenue', value: 12},
-                {meta:'Revenue', value: 7},
-                {meta:'Revenue', value: 14},
-             
-            ]
-        ]
-    }, {
-        low: 0,
-        high: 18,
-        fullWidth: true,
-        showArea: true,
-        showPoint: true,
-        showLabel: false,
-        axisX: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        axisY: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        chartPadding: 0,
-        plugins: [
-            Chartist.plugins.tooltip()
-        ]
-    }).on('draw', function(data) {
-        if (data.type === 'area') {
-            data.element.attr({
-                'style': 'fill: #28D094; fill-opacity: 0.2'
+
+        $.onmount('chart-action li a', function () {
+            $(this).on("click", function () {
+                createChart($(this));
             });
-        }
-        if (data.type === 'line') {
-            data.element.attr({
-                'style': 'fill: transparent; stroke: #28D094; stroke-width: 4px;'
-            });
-        }
-        if (data.type === 'point') {
-            var circle = new Chartist.Svg('circle', {
-              cx: [data.x], cy:[data.y], r:[7],
-            }, 'ct-area-circle');
-             data.element.replace(circle);
-        }
-    });
+        });
+
+    })();
 })(window, document, jQuery);

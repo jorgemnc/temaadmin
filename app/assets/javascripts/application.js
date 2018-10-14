@@ -19,7 +19,7 @@
 //= require modern/core/app-menu.js
 //= require modern/core/app.js
 //= require modern/scripts/customizer.js
-// require modern/scripts/pages/dashboard-ecommerce
+//= require modern/scripts/pages/dashboard-ecommerce
 //= require turbolinks
 
 $(function() {
@@ -33,7 +33,5 @@ $(function() {
         $.onmount()
     });
 
-    $(window).on('load', function() {
-        $.onmount()
-    })
+    $.onmount()
 });
