@@ -8,17 +8,10 @@
     Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 
-$(window).on("load", function(){
-    $('#recent-buyers, #new-orders').perfectScrollbar({
-        wheelPropagation: true
-    });
-    
-    /********************************************
-    *               Monthly Sales               *
-    ********************************************/
+$.onmount('#monthly-sales', function () {
     Morris.Bar.prototype.fillForSeries = function(i) {
-      var color;
-      return "0-#fff-#f00:20-#000";
+        var color;
+        return "0-#fff-#f00:20-#000";
     };
 
     Morris.Bar({
@@ -36,6 +29,12 @@ $(window).on("load", function(){
         resize: true,
         barColors: ['#FF394F'],
         hideHover: 'auto',
+    });
+});
+
+$(window).on("load", function(){
+    $('#recent-buyers, #new-orders').perfectScrollbar({
+        wheelPropagation: true
     });
     
 });
