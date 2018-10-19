@@ -26,9 +26,9 @@
 
 //Estos son estilos de vendors específicos a la página, pero los puse aquí para ver si los puedo ubicar bien con la ruta.
 @import 'modern/vendors/weather-icons/climacons.min';
-@import 'meteocons/style.css';
-@import 'modern/vendors/charts/chartist.css';
-@import 'modern/vendors/charts/chartist-plugin-tooltip.css';
+@import 'meteocons/style';
+@import 'modern/vendors/charts/chartist';
+@import 'modern/vendors/charts/chartist-plugin-tooltip';
 
 //en este archivo poner mis personalizaciones
 @import 'modern/custom';

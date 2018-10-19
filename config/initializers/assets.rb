@@ -24,3 +24,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( modern/core/app.js )
 # Rails.application.config.assets.precompile += %w( modern/scripts/customizer.js )
 Rails.application.config.assets.precompile += %w( modern/scripts/pages/dashboard-ecommerce.js )
+Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
