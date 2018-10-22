@@ -8,7 +8,7 @@
   Author: Pixinvent
   Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
-(function(window, document, $) {
+$(function() {
   'use strict';
 
   $.app = $.app || {};
@@ -979,4 +979,4 @@
     },
   };
 
-})(window, document, jQuery);
+});
